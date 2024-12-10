@@ -1,14 +1,78 @@
-#header {
-  margin-bottom: 20px;
+body {
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
 }
 
-#tickets {
-  grid-template-columns: repeat(4, 1fr);
+.container {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 4px 10px #0000001a;
+}
+
+header {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+header h1 {
+  color: #333;
+  font-size: 24px;
+}
+
+button {
+  cursor: pointer;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.ticket-grid {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
   display: grid;
 }
 
-.ticket {
-  margin-bottom: 20px;
-  display: inline-block;
+.ticket-card {
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 5px #0000001a;
+}
+
+.ticket-card h3 {
+  color: #333;
+  margin: 0;
+  font-size: 16px;
+}
+
+.ticket-card p {
+  color: #666;
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.ticket-card button {
+  background-color: #28a745;
+}
+
+.ticket-card button:hover {
+  background-color: #218838;
 }
 /*# sourceMappingURL=index.3a01df49.css.map */

@@ -751,7 +751,7 @@ let userAddress;
     } else alert("Please connect your wallet to use this DApp.");
 }
 // Initialize Web3 and load the DApp
-initWeb3();
+initWeb3(); ////////////////// 
 
 },{"web3":"caAX1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"caAX1":[function(require,module,exports,__globalThis) {
 /*! For license information please see web3.min.js.LICENSE.txt */ !function(e, t) {
