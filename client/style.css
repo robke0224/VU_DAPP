@@ -1,0 +1,128 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-direction: column; /* Stack elements vertically */
+}
+
+/* Title Styling */
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px; /* Add space below the title */
+}
+
+/* Form Container */
+div {
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px; /* Limit the width of the container */
+  margin-bottom: 20px; /* Space between form sections */
+}
+
+/* Center the Connect Wallet Button */
+#connect-wallet {
+  display: block; /* Make it behave as a block-level element */
+  margin: 10px auto; /* Center it horizontally */
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  width: fit-content;
+}
+
+#connect-wallet:hover {
+  background-color: #2980b9;
+}
+
+/* Center the Buy Ticket Button */
+#buy-ticket {
+  display: block;
+  margin: 10px auto; /* Center it horizontally */
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #3498db;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  width: fit-content;
+}
+
+#buy-ticket:hover {
+  background-color: #2980b9;
+}
+
+/* Input Fields */
+input[type="number"] {
+  width: 100%;
+  max-width: 300px; /* Limits width */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Wallet Info */
+#wallet-info {
+  font-weight: bold;
+  color: #27ae60;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Available Tickets List */
+ul#available-tickets {
+  list-style: none;
+  padding: 0;
+}
+
+ul#available-tickets li {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  background-color: #ecf0f1;
+  font-size: 14px;
+  color: #34495e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+      padding: 10px;
+  }
+
+  div {
+      padding: 10px;
+  }
+
+  button {
+      font-size: 14px;
+      padding: 8px 12px;
+  }
+
+  input[type="number"] {
+      font-size: 14px;
+  }
+}

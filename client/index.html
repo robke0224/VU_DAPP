@@ -5,159 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tickets DApp</title>
     <script src="https://cdn.jsdelivr.net/npm/web3/dist/web3.min.js"></script>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>Buy Tickets</h1>
     <button id="connect-wallet">Connect Wallet</button>
     <p id="wallet-info"></p>
     <div>
-        <h2>Available Tickets</h2>
-        <ul id="available-tickets"></ul>
-    </div>
-    <div>
         <h2>Buy Ticket</h2>
         <input type="number" id="ticket-id" placeholder="Ticket ID">
         <button id="buy-ticket">Buy</button>
     </div>
-
-    <script>
-        const contractABI = 
-        [
-    {
-        "inputs": [],
-        "stateMutability": "nonpayable",
-        "type": "constructor"
-    },
-    {
-        "inputs": [],
-        "name": "owner",
-        "outputs": [
-            {
-                "internalType": "address",
-                "name": "",
-                "type": "address"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function",
-        "constant": true
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "",
-                "type": "uint256"
-            }
-        ],
-        "name": "tickets",
-        "outputs": [
-            {
-                "internalType": "uint256",
-                "name": "price",
-                "type": "uint256"
-            },
-            {
-                "internalType": "address",
-                "name": "owner",
-                "type": "address"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function",
-        "constant": true
-    },
-    {
-        "inputs": [
-            {
-                "internalType": "uint256",
-                "name": "_index",
-                "type": "uint256"
-            }
-        ],
-        "name": "buyTicket",
-        "outputs": [],
-        "stateMutability": "payable",
-        "type": "function",
-        "payable": true
-    },
-    {
-        "inputs": [],
-        "name": "getAvailableTickets",
-        "outputs": [
-            {
-                "internalType": "uint256[]",
-                "name": "",
-                "type": "uint256[]"
-            }
-        ],
-        "stateMutability": "view",
-        "type": "function"
-    }
-];
-
-
-        const contractAddress = "0x1Ec038A4a0253c88c95953002fA11881925C37d1"; 
-
-        let web3;
-        let ticketsContract;
-
-        // Connect wallet
-        document.getElementById("connect-wallet").addEventListener("click", async () => {
-            if (window.ethereum) {
-                web3 = new Web3(window.ethereum); // Initialize web3
-                try {
-                    await window.ethereum.enable(); // Request wallet access
-                    const accounts = await web3.eth.getAccounts();
-                    document.getElementById("wallet-info").innerText = `Connected: ${accounts[0]}`;
-                    ticketsContract = new web3.eth.Contract(contractABI, contractAddress);
-                    loadAvailableTickets(); // Load tickets after connecting
-                } catch (err) {
-                    alert("Connection failed: " + err.message);
-                }
-            } else {
-                alert("Please install MetaMask to use this DApp.");
-            }
-        });
-
-        // Load available tickets
-        async function loadAvailableTickets() {
-            try {
-                const tickets = await ticketsContract.methods.getAvailableTickets().call();
-                const ticketList = document.getElementById("available-tickets");
-                ticketList.innerHTML = ""; // Clear existing list
-                tickets.forEach(ticketId => {
-                    const listItem = document.createElement("li");
-                    listItem.textContent = `Ticket ID: ${ticketId}`;
-                    ticketList.appendChild(listItem);
-                });
-            } catch (err) {
-                console.error("Error fetching tickets:", err);
-                alert("Failed to load tickets: " + err.message);
-            }
-        }
-
-        // Buy ticket
-        document.getElementById("buy-ticket").addEventListener("click", async () => {
-            const ticketId = document.getElementById("ticket-id").value;
-            if (!ticketId) {
-                alert("Please enter a valid ticket ID.");
-                return;
-            }
-            try {
-                const accounts = await web3.eth.getAccounts();
-                const ticketPrice = web3.utils.toWei("0.1", "ether"); // Assuming ticket price is 0.1 ether
-                await ticketsContract.methods.buyTicket(ticketId).send({
-                    from: accounts[0],
-                    value: ticketPrice,
-                });
-                alert("Ticket purchased successfully!");
-                loadAvailableTickets(); // Refresh ticket list
-            } catch (err) {
-                console.error("Error buying ticket:", err);
-                alert("Failed to buy ticket: " + err.message);
-            }
-        });
-    </script>
 </body>
 </html>
