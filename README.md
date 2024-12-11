@@ -52,27 +52,29 @@ This project involves the creation of a **Smart Contract** using Solidity to imp
 
 2. Install Dependencies
   Run the following command to install required dependencies:
-  ```bash
+    ```bash
         npm install
    ```
 3. Set up the development environment:
 
       Install Truffle:
-        ```
-             npm install -g truffle
-       ```
-      Install Ganache.
-      Install the MetaMask browser extension.
-
-4. Compile the smart contract:
+       ```bash
+        npm install -g truffle
          ```
+
+   Install Ganache.
+
+   Install the MetaMask browser extension.
+
+5. Compile the smart contract:
+         ```bash
             truffle compile
          ```
-5. Deploy the smart contract:
-         ```
+6. Deploy the smart contract:
+         ```bash
             truffle migrate
        ```
-6. Start the local server for the DApp front-end:
+7. Start the local server for the DApp front-end:
          ```
             npm start
          ```
