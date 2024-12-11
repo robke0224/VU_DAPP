@@ -49,35 +49,32 @@ This project involves the creation of a **Smart Contract** using Solidity to imp
 1. Clone the repository:
    ```bash
    git clone https://github.com/robke0224/VU_DAPP/tree/v0.2
-
 2. Install Dependencies
   Run the following command to install required dependencies:
     ```bash
-        npm install
-   ```
+    npm install
+
 3. Set up the development environment:
-
-      Install Truffle:
-       ```bash
-        npm install -g truffle
-         ```
-
-   Install Ganache.
-
-   Install the MetaMask browser extension.
+      - Install Truffle:
+  
+       npm install -g truffle
+	 
+	 - Install Ganache.
+	 - Install the MetaMask browser extension.
 
 5. Compile the smart contract:
-         ```bash
-            truffle compile
-         ```
+ 
+       truffle compile
+       
 6. Deploy the smart contract:
-         ```bash
-            truffle migrate
-       ```
+       
+       truffle migrate
+
 7. Start the local server for the DApp front-end:
-         ```
-            npm start
-         ```
+
+		cd client
+		npm run start
+
 
 
 ---
