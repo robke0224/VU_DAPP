@@ -48,40 +48,35 @@ This project involves the creation of a **Smart Contract** using Solidity to imp
 ## Setup
 1. Clone the repository:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/robke0224/VU_DAPP/tree/v0.2
 
 2. Install Dependencies
   Run the following command to install required dependencies:
   ```bash
-    npm install
+  npm install
 
 3. Set up the development environment:
 
-Install Truffle:
-  ```bash
-  npm install -g truffle
-Install Ganache.
-Install the MetaMask browser extension.
-Compile the smart contract:
-truffle compile
-Deploy the smart contract:
-truffle migrate
-Start the local server for the DApp front-end:
-npm start
-Usage
+      Install Truffle:
+        ```bash
+           npm install -g truffle
+  
+      Install Ganache.
+      Install the MetaMask browser extension.
 
-Use MetaMask to connect to the Ethereum network.
-Interact with the DApp to:
-Initiate transactions between participants (buyer, seller, courier).
-View logs and transaction status.
-Test the application functionality using both Ganache and Goerli test networks.
-References
+4. Compile the smart contract:
+         ```bash
+            truffle compile
 
-Solidity Documentation
-Remix IDE Documentation
-Truffle Suite Documentation
-Ganache Setup
-MetaMask Guide
-Tutorials:
-Building Smart Contracts
-Building Ethereum DApps
+5. Deploy the smart contract:
+         ```bash
+            truffle migrate
+
+6. Start the local server for the DApp front-end:
+         ```bash
+            npm start
+
+
+
+
+
