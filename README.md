@@ -37,19 +37,19 @@ This project involves the creation of a **Smart Contract** using Solidity to imp
 
 3. **Testing**:
    - Local testing using Ganache.
-   - Public testing on Goerli network with Etherscan logs.
 
 ## Technologies Used
-- **Programming Language**: Solidity
-- **Development Tools**: Remix IDE, Truffle Suite
+- **Programming Language**: Solidity for Smart Contract
+- **Development Tools**: Visual Studio Code (with Solidity extension), Truffle Suite
 - **Blockchain Platform**: Ethereum
 - **Testing Tools**: Ganache, MetaMask
-- **Front-End Framework**: (Choose your framework, e.g., React, Vue.js, or HTML/CSS/JavaScript)
+- **Front-End Framework**: HTML, CSS and JavaScript
 
 ## Setup
 1. Clone the repository:
    ```bash
    git clone https://github.com/robke0224/VU_DAPP/tree/v0.2
+   
 2. Install Dependencies
   Run the following command to install required dependencies:
     ```bash
